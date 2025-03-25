@@ -39,7 +39,7 @@ const Register = () => {
 
   const isPasswordStrong = (password: string) => {
     const strongPasswordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~`!@#$%^&*()_\-+={[}\]|\\:;"'<,>.?/]).{8,}$/;
     return strongPasswordRegex.test(password);
   };
 
@@ -77,12 +77,10 @@ const Register = () => {
       missingRequirements.push("Password should have at least 1 number '1-0'.");
     }
 
-    if (/[!@#$%^&*()]/.test(password)) {
+    if (/[~`!@#$%^&*()_\-+={[}\]|\\:;"'<,>.?/]/.test(password)) {
       strength += 1;
     } else {
-      missingRequirements.push(
-        "Password should have at least 1 symbol '!@#$%^&*()'."
-      );
+      missingRequirements.push("Password should have at least 1 symbol.");
     }
 
     if (password.length === 0) {
