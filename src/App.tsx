@@ -14,11 +14,10 @@ import RegisterComplete from "../components/RegisterComplete";
 import Home from "../components/Home";
 import ViewProfile from "../components/profile/ViewProfile";
 import EditProfile from "../components/profile/EditProfile";
-import About from "../components/footer/About"; // Import About component
-import Contact from "../components/footer/Contact"; // Import Contact component
-import Privacy from "../components/footer/Privacy"; // Import Privacy component
-import Terms from "../components/footer/Terms"; // Import Terms component
-
+import About from "../components/footer/About";
+import Contact from "../components/footer/Contact";
+import Privacy from "../components/footer/Privacy";
+import Terms from "../components/footer/Terms";
 const App = () => {
   const isLoggedIn = !!localStorage.getItem("loggedInUser");
 

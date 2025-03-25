@@ -70,7 +70,7 @@ const Login = () => {
     }
 
     localStorage.setItem("loggedInUser", JSON.stringify(user));
-    window.location.href = "/home";
+    window.location.href = "/";
   };
 
   return (
